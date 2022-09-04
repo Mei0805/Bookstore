@@ -1,0 +1,372 @@
+:root {
+  --darkblue1: #011826;
+  --darkblue2: #224459;
+  --midblue1: #75a3bf;
+  --midblue2: #42778c;
+  --lightblue1: #c2e0f2;
+  --lightgrey: #f5f5fa;
+}
+
+#breadcrumb{
+  background: var(--lightgrey);
+  .breadcrumb-item{
+    font-weight: 500;
+    a{
+      color: var(--darkblue2);
+      text-decoration: none;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--lightgrey);
+  color: white;
+
+  header {
+    height: 80px;
+    background: #cce6ef;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    #namePage h3 {
+      font-size: 26px;
+      font-weight: 800 !important;
+      color: #2d95e3;
+      text-decoration: none;
+    }
+
+    .NavContainer {
+      font-size: 16px;
+      font-weight: 500;
+      .nav-item {
+        color: #2d95e3;
+        padding: 0 1rem !important;
+        a{
+          color: #2d95e3;
+        }
+      }
+      .nav-item:hover {
+        color: #084472;
+        padding: 0 1rem !important;
+        & a:hover{
+          color: #084472;
+        }
+      }
+    }
+  }
+
+  #bookListContainer {
+    min-height: 60vh;
+    background: rgba(255, 255, 255, 0.526);
+    border-radius: 8px;
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: 24% 24% 24% auto;
+    grid-gap: 1rem;
+
+    .bookItem {
+      text-align: center;
+      padding: 1rem;
+      border: 1px solid rgba(47, 79, 79, 0.307);
+      border-radius: 8px;
+      &:hover{
+        background: var(--lightgrey);
+        cursor: pointer;
+      }
+      &.like {
+        background: #c2f0ff94;
+
+        .button .likeBtn {
+          background: #fd4c38;
+        }
+      }
+
+      h3 {
+        margin: 0;
+        height: 50px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      img {
+        height: 150px;
+        width: 100px;
+        object-fit: cover;
+      }
+
+      p.price {
+        color: #fd4c38;
+        font-weight: bold;
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        button {
+          cursor: pointer;
+          padding: 5px 10px;
+          color: white;
+          border: none;
+          border-radius: 3px;
+        }
+
+        .likeBtn {
+          background: #2d95e3;
+        }
+        .muaBtn {
+          background: #303c40;
+        }
+
+        .muaBtn.added{
+          background: green;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    border-bottom: 1px solid white;
+    .showList {
+      h3.tittle {
+        margin: 0 1rem;
+        line-height: 50px;
+      }
+      .sachI {
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        h3 {
+          margin: 0;
+          font-size: 16px;
+          color: rgb(251, 255, 2);
+        }
+        img {
+          height: 100px;
+          width: 65px;
+          object-fit: cover;
+        }
+        p.price {
+          margin: 2px;
+          font-size: 14px;
+          font-style: italic;
+          font-weight: bold;
+        }
+        .escBtn button {
+          cursor: pointer;
+          background: rgba(214, 214, 214, 0.252);
+          border: none;
+          color: white;
+        }
+      }
+    }
+  }
+  .title {
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 800;
+  }
+
+  .base-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .header {
+      font-size: 24px;
+      font-family: "Open Sans", sans-serif;
+    }
+  
+    .content {
+      display: flex;
+      flex-direction: column;
+  
+      .image {
+        width: 100px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+  
+      .form {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: fit-content;
+          label {
+            font-size: 20px;
+          }
+          input {
+            margin-top: 6px;
+            min-width: 18em;
+            height: 37px;
+            padding: 0px 10px;
+            font-size: 16px;
+            font-family: "Open Sans", sans-serif;
+            background-color: #f3f3f3;
+            border: 0;
+            border-radius: 4px;
+            margin-bottom: 31px;
+            transition: all 250ms ease-in-out;
+            &:hover {
+              //background-color: #ffffff;
+              //box-shadow: 0px 0px 14px 0.3px #0e81ce96;
+            }
+  
+            &:focus {
+              outline: none;
+              box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+            }
+          }
+        }
+      }
+    }
+  
+    .footer {
+      margin-top: 3em;
+    }
+  }
+}
+main{
+  #banner{
+    height: 50vh;
+    background-image: url('https://img.freepik.com/free-vector/magic-time-poster-with-boy-with-spell-book_107791-7353.jpg?w=1380&t=st=1658855506~exp=1658856106~hmac=26409702257f8aca735bcd39da77fc256a1700d02a41f57794a2a613937f5b56');
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.header {
+  height: 60px;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section1 {
+  background: var(--lightgrey);
+}
+.footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  margin: 1rem auto;
+  width: 50%;
+  //min-height: 44em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+  z-index: 99;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.2);
+    border-radius: 4px;
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    padding: 17px 10px;
+    //transition: transform 200ms ease-in-out;
+  }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90%;
+    background-color: #3498db;
+    width: 100%;
+    position: absolute;
+    right: -34%;
+    border-radius: 6px;
+    z-index: 1;
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.281);
+
+    &.right {
+      right: -40%;
+      align-items: flex-end;
+      &:hover {
+        right: -45%;
+      }
+    }
+    &.left {
+      right: 40%;
+      align-items: flex-start;
+      &:hover {
+        right: 45%;
+      }
+    }
+
+    .text {
+      font-size: 21px;
+      font-weight: 500;
+      color: #fff;
+      margin-right: 3em;
+      margin-left: 3em;
+    }
+  }
+}
+
+//Button
+.btn {
+  font-size: 21px;
+  padding: 5px 20px;
+  border: 0;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 3px;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: #2386c8;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+//navpill
+.typeTitle{
+  .list-group-item-action{
+   width: auto !important;
+  }
+}
+
+
+//deleteCartItem
+.cartTable .tienMotSach{
+  position: relative;
+  button.deleteCartI{
+    background: white;
+    color:#224459;
+
+    padding: 5px 10px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+  }
+}

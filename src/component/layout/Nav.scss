@@ -1,0 +1,30 @@
+:root {
+    --darkblue1: #011826;
+    --darkblue2: #224459;
+    --midblue1: #75a3bf;
+    --midblue2: #42778c;
+    --lightblue1: #c2e0f2;
+    --lightgrey: #f5f5fa;
+  }
+  
+
+#Header {
+    position: relative;
+    .dateGreet {
+        padding-right: 10px;
+        color: rgba(0, 0, 0, 0.693);
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+
+
+.resWeather{
+width: 60%;
+padding: .8rem;
+background: var(--lightblue1);
+border: 1px solid var(--darkblue1);
+border-radius: 3px;
+}
